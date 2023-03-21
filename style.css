@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d8d8d8;
+  font-family: "Josefin+Sans", sans-serif;
+  display: flex; /*розміщення блоків-дітей в одному рядку*/
+  flex-direction: column; /*розміщення блоків-дітей в один під одним*/
+  align-items: center; /*розміщення блоків-дітей посередині відносно боків*/
+  justify-content: center; /*розміщення блоків-дітей посередині відносно низу та верху*/
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: #408e91;
+  font-size: 45px;
+  margin: 10px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.box {
+  background-color: #e49393;
+  color: #d8d8d8;
+  border: 10px;
+  border-style: dotted;
+  border-color: #408e91;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  transform: translateX(500%);
+  transition: transform 0.4s ease-in;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-500%);
+  background-color: #408e91;
+  border: 10px;
+  border-style: dotted;
+  border-color: #e49393;
+}
+
+.box.show {
+  transform: translateX(0%);
+}
+
+.box h2 {
+  font-size: 40px;
+}
